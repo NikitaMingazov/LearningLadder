@@ -1,0 +1,66 @@
+/*
+index.html
+Author:Nikita Mingazov
+Date created: 24/7/23
+*/
+body {
+	background-image: url("images/background.jpg");
+	margin-left: 1cm;
+	text-align: left;
+	/*font info*/
+	font-family: serif;
+	font-size: 20px;
+	color: black;
+}
+h1 {
+	text-align: center;
+}
+h1, h2 {
+	text-transform: uppercase;
+}
+em {
+	font-size: 150%;
+	font-weight: bold;
+}
+img {
+	margin: 10px;
+}
+.box {
+	border-color: #000000;
+	border-width: 1px;
+	border-style: dashed;
+}
+.copyright {
+	vertical-align: bottom;
+	text-align: right;
+	font-size: small;
+}
+nav {
+	text-align: center;
+}
+nav a:hover {
+	font-size:110%;
+	color: rgb(20, 110, 110);
+}
+a {
+	color: rgb(10, 10, 30);
+}
+a:visited {
+	color: rgb(120, 40, 80);
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+input:required {
+  background-color: rgb(255, 245, 245);
+}
+#returning {
+	background-color: rgb(255, 255, 200);
+	display: inline-block;
+}
+.require:after {
+    content: " *";
+    color: red;
+    font-size: 0.7em;
+}

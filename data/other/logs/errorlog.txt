@@ -1,0 +1,15 @@
+[17-Oct-2023 05:30:24 UTC] PHP Warning:  chmod(): Operation not permitted in /var/www/html/A02/admin/install.php on line 45
+[17-Oct-2023 05:30:24 UTC] PHP Warning:  chmod(): Operation not permitted in /var/www/html/A02/admin/install.php on line 45
+[17-Oct-2023 05:30:24 UTC] PHP Warning:  chmod(): Operation not permitted in /var/www/html/A02/admin/install.php on line 45
+[17-Oct-2023 05:30:24 UTC] PHP Warning:  chmod(): Operation not permitted in /var/www/html/A02/admin/install.php on line 45
+[17-Oct-2023 05:30:24 UTC] PHP Warning:  chmod(): Operation not permitted in /var/www/html/A02/admin/install.php on line 45
+[17-Oct-2023 05:30:24 UTC] PHP Warning:  chmod(): Operation not permitted in /var/www/html/A02/admin/install.php on line 45
+[17-Oct-2023 05:30:24 UTC] PHP Warning:  chmod(): Operation not permitted in /var/www/html/A02/admin/install.php on line 45
+[17-Oct-2023 05:30:24 UTC] PHP Warning:  chmod(): Operation not permitted in /var/www/html/A02/admin/install.php on line 45
+[22-Oct-2023 22:08:37 UTC] PHP Warning:  simplexml_load_file(): I/O warning : failed to load external entity &quot;../../data/pages/tabletop.xml&quot; in /var/www/html/A02/theme/Nikita/xml-template.php on line 18
+[22-Oct-2023 22:12:26 UTC] PHP Warning:  simplexml_load_file(): I/O warning : failed to load external entity &quot;../../data/pages/tabletop.xml&quot; in /var/www/html/A02/theme/Nikita/xml-template.php on line 18
+[22-Oct-2023 22:12:27 UTC] PHP Warning:  simplexml_load_file(): I/O warning : failed to load external entity &quot;../../data/pages/tabletop.xml&quot; in /var/www/html/A02/theme/Nikita/xml-template.php on line 18
+[22-Oct-2023 22:12:28 UTC] PHP Warning:  simplexml_load_file(): I/O warning : failed to load external entity &quot;../../data/pages/tabletop.xml&quot; in /var/www/html/A02/theme/Nikita/xml-template.php on line 18
+[22-Oct-2023 22:14:08 UTC] PHP Warning:  simplexml_load_file(): I/O warning : failed to load external entity &quot;../../data/pages/sports.xml&quot; in /var/www/html/A02/theme/Nikita/xml-template.php on line 18
+[22-Oct-2023 22:14:13 UTC] PHP Warning:  simplexml_load_file(): I/O warning : failed to load external entity &quot;../../data/pages/sports.xml&quot; in /var/www/html/A02/theme/Nikita/xml-template.php on line 18
+[22-Oct-2023 22:14:17 UTC] PHP Warning:  simplexml_load_file(): I/O warning : failed to load external entity &quot;../../data/pages/tabletop.xml&quot; in /var/www/html/A02/theme/Nikita/xml-template.php on line 18

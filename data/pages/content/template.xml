@@ -1,0 +1,45 @@
+<?xml version = "1.0"?>
+<!--
+template.html
+Author:Nikita Mingazov
+Date created: 24/7/23
+-->
+<!DOCTYPE games [
+	<!ELEMENT games (game+)>
+	<!ELEMENT game (name, description, subject, grade, tag*, cost?, equipment+, review*, picture+, url, multiplayer, author+, category?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT description (#PCDATA)>
+	<!ELEMENT subject (#PCDATA)>
+	<!ELEMENT grade (#PCDATA)>
+	<!ELEMENT tag (#PCDATA)>
+	<!ELEMENT cost (#PCDATA)>
+	<!ELEMENT equipment (name, cost?)>
+	<!ELEMENT review (#PCDATA)>
+	<!ELEMENT picture (#PCDATA)>
+	<!ELEMENT url (#PCDATA)>
+	<!ELEMENT multiplayer (#PCDATA)>
+	<!ELEMENT author (#PCDATA)>
+	<!ELEMENT category (#PCDATA)>
+
+	<!ATTLIST review rating CDATA #REQUIRED>
+	<!ATTLIST author profile CDATA #IMPLIED>
+
+	<!ENTITY image "../data/uploads/">
+	<!ENTITY url "Learningladder.com/game/">
+]>
+
+<games>
+	<game>
+		<name>template</name>
+		<description>template</description>
+		<subject>SENG1050</subject>
+		<grade>university</grade>
+		<equipment>
+			<name>XML</name>
+		</equipment>
+		<picture>/home/pictures/*</picture>
+		<url>/home</url>
+		<multiplayer>false</multiplayer>
+		<author>Nikita</author>
+	</game>
+</games>

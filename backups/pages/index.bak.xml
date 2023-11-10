@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Tue, 24 Oct 2023 02:01:26 +0000</pubDate><title><![CDATA[Learning Ladder]]></title><url><![CDATA[index]]></url><meta><![CDATA[Learning Ladder, games, teaching, learning, school]]></meta><metad><![CDATA[The home page for Learning Ladder, a site hosting educational games]]></metad><menu><![CDATA[Home]]></menu><menuOrder><![CDATA[1]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[<!--
+index.html
+Author:Nikita Mingazov
+Date created: 24/7/23
+--><script>
+	function getCookie(key)
+{
+    var result;
+    return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+}
+    var name = getCookie('page');
+    var time = getCookie('time');
+    if (name && time) {
+
+    }
+    displayName = name[0].toUpperCase() + name.substring(1);
+    document.write('<div id="returning">');
+    document.write('<h3>You were last looking at <a href=/?id=games&category='+ name +'>'+displayName+' Games</a></h3>');
+    document.write('<p>At: ' + time + '</p>');
+    document.write('</div>');
+</script>
+<h2>Our mission</h2>
+
+<p style="font-size:120%;">Welcome to Learning Ladder! We are devoted to learning, and one innovation we are exploring is gamification, where important concepts can be learned through games! To this end we have created this page to host many categories of games and collaborate with teachers around the world.</p>
+
+<h2>Featured games</h2>
+
+<p>Here are some samples of the many games that we have catalogued. These featured games have been tried and proven in Australian classrooms to enhance learning outcomes.</p>
+
+<ul>
+	<li class="box">
+		<h3><em>Matrix Chess</em></h3>
+		<img alt="A photo of a chess board, with the black player moving their queen" src="../data/uploads/matrixchess.webp" style="width: 300px; height: 169px;" />
+		<p class="gameDesc">This game requires participants to play chess, each move must be preceded by a matrix multiplication upon the board.</p>
+	</li>
+	<li class="box">
+		<h3><em>Adders And Algebra</em></h3>
+		<img alt="A snakes and ladders board" src="../data/uploads/addersandalgebra.webp" style="width: 300px; height: 296px;" />
+		<p class="gameDesc">This game is like snakes and ladders, but algebraic expressions determine how far up or down the player goes.</p>
+	</li>
+	<li class="box">
+		<h3><em>Hopscotch</em></h3>
+		<img alt="hopscotch drawn on asphalt by chalk" src="../data/uploads/hopscotch.webp" style="width: 275px; height: 183px;" />
+		<p class="gameDesc">This game requires the player to name the number they are about to jump on, aiding in learning and memrising numbers.</p>
+	</li>
+</ul>
+
+<p>Resources used: <a href="https://www.w3schools.com">W3</a></p>
+
+<p>&nbsp;</p>
+]]></content><private><![CDATA[]]></private><author><![CDATA[nikita]]></author></item>

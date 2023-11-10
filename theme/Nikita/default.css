@@ -1,0 +1,118 @@
+/*
+default.css
+Author:Nikita Mingazov
+Date created: 21/10/23
+I just used inspect element to copy all the default styles from Brave browser
+*/
+html {
+    display: block;
+}
+head {
+    display: none;
+}
+body {
+    display: block;
+    margin: 8px;
+    line-height: normal;
+}
+div {
+    display: block;
+}
+h1, h2 {
+    text-transform: uppercase;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: center;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+li {
+    display: list-item;
+    text-align: match-parent;
+}
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+em {
+    font-style: italic;
+}
+b {
+    font-weight: bold;
+}
+img {
+    overflow: clip;
+}
+a {
+    text-decoration: underline;
+}
+a:link {
+	color: blue;
+}
+a:visited {
+	color: purple;
+}
+a:hover {
+	cursor: pointer;
+}
+table {
+    border: 1px solid;
+    border-collapse: separate; /* Re-enable borders between cells */
+    border-spacing: 1px; /* Adjust the spacing as needed */
+    /* Other styles */
+}
+td {
+    border: 1px solid;
+    display: table-cell;
+    vertical-align: inherit;
+
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    font-weight: bold;
+}

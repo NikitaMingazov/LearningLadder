@@ -1,0 +1,84 @@
+<?xml version = "1.0"?>
+<!--
+tabletop.xml
+Author:Nikita Mingazov
+Date created: 24/7/23
+-->
+<!DOCTYPE games [
+	<!ELEMENT games (game+)>
+	<!ELEMENT game (name, description, subject, grade, tag*, cost?, equipment+, review*, picture+, url, multiplayer, author+, category?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT description (#PCDATA)>
+	<!ELEMENT subject (#PCDATA)>
+	<!ELEMENT grade (#PCDATA)>
+	<!ELEMENT tag (#PCDATA)>
+	<!ELEMENT cost (#PCDATA)>
+	<!ELEMENT equipment (name, cost?)>
+	<!ELEMENT review (#PCDATA)>
+	<!ELEMENT picture (#PCDATA)>
+	<!ELEMENT url (#PCDATA)>
+	<!ELEMENT multiplayer (#PCDATA)>
+	<!ELEMENT author (#PCDATA)>
+	<!ELEMENT category (#PCDATA)>
+
+	<!ATTLIST review rating CDATA #REQUIRED>
+	<!ATTLIST author profile CDATA #IMPLIED>
+
+	<!ENTITY image "../data/uploads/">
+	<!ENTITY url "Learningladder.com/game/">
+]>
+
+<games>
+	<game>
+		<name>Duopoly</name>
+		<description>Two players must compete in a market for the favour of their prospective customers.</description>
+		<subject>Business Studies</subject>
+		<grade>Year 12</grade>
+		<cost>$40</cost>
+		<equipment>
+			<name>Calculator</name>
+		</equipment>
+		<review rating="4">This game was hard to get the hang of, but it expresses the concepts we teach very well and was a great aid to my class</review>
+		<picture>&image;duopoly.webp</picture>
+		<url>&url;duopoly</url>
+		<multiplayer>true</multiplayer>
+		<author>Jack Irving</author>
+		<author profile='localhome/JSchmidt'>James Schmidt</author>
+		<category>Tabletop</category>
+	</game>
+
+	<game>
+		<name>Adders and Algebra</name>
+		<description>Where the snake or the ladder will send you is decided by an algebraic expression! Varying levels of difficulty.</description>
+		<subject>Mathematics</subject>
+		<grade>Years 6-8</grade>
+		<equipment>
+			<name>Board</name>
+			<cost>$15</cost>
+		</equipment>
+		<picture>&image;addersandalgebra.webp</picture>
+		<url>&url;addersandalgebra</url>
+		<multiplayer>Both</multiplayer>
+		<author profile='localhome/PStone'>Peter Stone</author>
+		<category>Tabletop</category>
+	</game>
+
+	<game>
+		<name>Matrix chess</name>
+		<description>This game is chess, except you must perform a matrix multiplication on the board before each move, if your answer is wrong your turn is skipped</description>
+		<subject>Mathematics</subject>
+		<grade>University</grade>
+		<tag>difficult</tag>
+		<tag>strategic</tag>
+		<cost>$20</cost>
+		<equipment>
+			<name>chess board</name>
+			<cost>$10</cost>
+		</equipment>
+		<picture>&image;matrixchess.webp</picture>
+		<url>&url;matrixchess</url>
+		<multiplayer>true</multiplayer>
+		<author profile='localhome/SWebster'>Stephen Webster</author>
+		<category>Tabletop</category>
+	</game>
+</games>

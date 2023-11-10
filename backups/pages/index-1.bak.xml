@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Tue, 17 Oct 2023 21:14:48 +0000</pubDate><title><![CDATA[Learning Ladder]]></title><url><![CDATA[index-1]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Homepage]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[<!--
+index.html
+Author:Nikita Mingazov
+Date created: 24/7/23
+-->
+<style type="text/css">.gameDesc {color: rgb(40, 0, 40);}
+		h2 {text-decoration: underline;}
+</style>
+<h2>Our mission</h2>
+
+<p style="text-size:120%;">Welcome to Learning Ladder! We are devoted to learning, and one innovation we are exploring is gamification, where important concepts can be learned through games! To this end we have created this page to host many categories of games and collaborate with teachers around the world.</p>
+
+<h2>Featured games</h2>
+
+<p>Here are some samples of the many games that we have catalogued. These featured games have been tried and proven in Australian classrooms to enhance learning outcomes.</p>
+
+<ul>
+	<li class="box">
+		<h3><em>Matrix Chess</em></h3>
+		<br />
+		<img height="300px" src="images/MatrixChess.png" width="300px" />
+		<p class="gameDesc">This game requires participants to play chess, each move must be preceded by a matrix multiplication upon the board.</p>
+	</li>
+	<li class="box">
+		<h3><em>Adders And Algebra</em></h3>
+		<br />
+		<img height="300px" src="images/AddersAndAlgebra.png" width="300px" />
+		<p class="gameDesc">This game is like snakes and ladders, but algebraic expressions determine how far up or down the player goes.</p>
+	</li>
+	<li class="box">
+		<h3><em>Hopscotch</em></h3>
+		<br />
+		<img height="300px" src="images/hopscotch.png" width="300px" />
+		<p class="gameDesc">This game requires the player to name the number they are about to jump on, aiding in learning and memrising numbers.</p>
+	</li>
+</ul>
+
+<p>Resources used: <a href="https://www.w3schools.com">W3</a></p>
+]]></content><private><![CDATA[]]></private><author><![CDATA[nikita]]></author></item>

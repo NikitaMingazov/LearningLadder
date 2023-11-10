@@ -1,0 +1,96 @@
+<?xml version = "1.0"?>
+<!--
+sports.xml
+Author:Nikita Mingazov
+Date created: 25/7/23
+-->
+<!DOCTYPE games [
+	<!ELEMENT games (game+)>
+	<!ELEMENT game (name, description, subject, grade, tag*, cost?, equipment+, review*, picture+, url, multiplayer, author+, category?)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT description (#PCDATA)>
+	<!ELEMENT subject (#PCDATA)>
+	<!ELEMENT grade (#PCDATA)>
+	<!ELEMENT tag (#PCDATA)>
+	<!ELEMENT cost (#PCDATA)>
+	<!ELEMENT equipment (name, cost?)>
+	<!ELEMENT review (#PCDATA)>
+	<!ELEMENT picture (#PCDATA)>
+	<!ELEMENT url (#PCDATA)>
+	<!ELEMENT multiplayer (#PCDATA)>
+	<!ELEMENT author (#PCDATA)>
+	<!ELEMENT category (#PCDATA)>
+
+	<!ATTLIST review rating CDATA #REQUIRED>
+	<!ATTLIST author profile CDATA #IMPLIED>
+
+	<!ENTITY image "../data/uploads/">
+	<!ENTITY url "Learningladder.com/game/">
+]>
+
+<games>
+	<game>
+		<name>Hopscotch</name>
+		<description>The player must hop on one leg along a course and read the number they jump on. Time taken can be recorded if desired.</description>
+		<subject>Mathematics</subject>
+		<grade>Years 2-3</grade>
+		<tag>homemade</tag>
+		<equipment>
+			<name>Chalk</name>
+		</equipment>
+		<equipment>
+			<name>Asphalt</name>
+		</equipment>
+		<review rating='5'>A great idea, my students were quick to remember their numbers after I started using this exercise.</review>
+		<picture>&image;hopscotch.webp</picture>
+		<url>&url;hopscotch</url>
+		<multiplayer>false</multiplayer>
+		<author>Nikita Mingazov</author>
+		<author profile='localhome/MTruswell'>Miriam Truswell</author>
+		<category>Sports</category>
+	</game>
+	<game>
+		<name>Handball</name>
+		<description>Two to four players play handball, but before touching the ball they must name an English word, starting with a particular letter.</description>
+		<subject>English</subject>
+		<grade>Years 3-6</grade>
+		<tag>homemade</tag>
+		<equipment>
+			<name>Chalk</name>
+		</equipment>
+		<equipment>
+			<name>Handball</name>
+			<cost>$10</cost>
+		</equipment>
+		<picture>&image;handball.webp</picture>
+		<url>&url;handball</url>
+		<multiplayer>true</multiplayer>
+		<author>Nikita Mingazov</author>
+		<author profile='localhome/MHughes'>Mark Hughes</author> 
+		<category>Sports</category>
+	</game>
+	<game>
+		<name>Parabola golf</name>
+		<description>Given the distance of their target and the obstacles, a parabola from point A to B must be named before a shot can be made. First to the hole wins.</description>
+		<subject>Mathematics</subject>
+		<grade>Years 12</grade>
+		<tag>Expensive</tag>
+		<equipment>
+			<name>Golf field</name>
+		</equipment>
+		<equipment>
+			<name>Golf pucks</name>
+			<cost>$400</cost>
+		</equipment>
+		<equipment>
+			<name>Golf Balls</name>
+			<cost>$50</cost>
+		</equipment>
+		<review rating='0'>This game is extremely expensive, impractical and checking for cheating is very difficult.</review>
+		<picture>&image;golf.webp</picture>
+		<url>&url;golf</url>
+		<multiplayer>Both</multiplayer>
+		<author profile='localhome/RAdams2'>Roger Adams</author>
+		<category>Sports</category>
+	</game>
+</games>

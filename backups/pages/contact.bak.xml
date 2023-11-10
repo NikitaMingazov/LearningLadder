@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Tue, 24 Oct 2023 05:16:08 +0000</pubDate><title><![CDATA[Contact us]]></title><url><![CDATA[contact]]></url><meta><![CDATA[]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Contact us]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[<h2>Phone number and email</h2>
+
+<p><b>Phone number:</b><br />
+	(02) 4990 7789<br />
+	<b>Email:</b><br />
+	contact@LearningLadder.com</p>
+
+<h2>Write a form</h2>
+
+<form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post"><label for="name">Your name?</label><br />
+<input id="name" name="name" required="" type="text" /><br />
+<label for="email">What is your email?</label><br />
+<input id="email" name="email" required="" type="email" /><br />
+<label for="subject">Message subject</label><br />
+<input id="subject" name="subject" required="" type="text" /><br />
+<label for="message">Message body</label><br />
+<textarea id="message" name="message" required=""></textarea><br />
+<label for="urgentYes">Is your message urgent?</label><br />
+<label for="Urgentyes">Yes</label> <input id="Urgentyes" name="urgent" required="" type="radio" value="yes" /><br />
+<label for="Urgentno">No</label> <input id="Urgentno" name="urgent" required="" type="radio" value="no" /><br />
+<input type="submit" value="Submit" /> <input type="reset" />&nbsp;</form>
+]]></content><private><![CDATA[]]></private><author><![CDATA[nikita]]></author></item>

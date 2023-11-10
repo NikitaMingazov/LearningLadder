@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Thu, 09 Nov 2023 13:29:30 +0000</pubDate><title><![CDATA[Data Collection]]></title><url><![CDATA[input]]></url><meta><![CDATA[form, input, submit, user generated]]></meta><metad><![CDATA[A form to upload a game]]></metad><menu><![CDATA[Data Collection]]></menu><menuOrder><![CDATA[0]]></menuOrder><menuStatus><![CDATA[]]></menuStatus><template><![CDATA[template.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[<form action="https://jkorpela.fi/cgi-bin/echo.cgi?" method="post">
+<h3>Your Information</h3>
+<label class="require" for="name">Your name:</label> <input id="name" name="name" required="" type="text" /><br />
+<br />
+<label class="require" for="email">Email address:</label> <input id="email" name="email" required="" type="text" /><br />
+<br />
+<label class="require" for="submitted">Number of games submitted:</label> <input id="submitted" name="submitted" required="" type="number" />
+<p class="require">Have you taught in the last 5 years?</p>
+<input checked="checked" id="true" name="taught" required="" type="radio" /> <label for="true">Yes</label><br />
+<input id="false" name="taught" required="" type="radio" /> <label for="false">No</label>
+
+<h3>Your Game</h3>
+<label class="require" for="gname">Game name:</label> <input id="gname" name="gname" required="" type="text" /><br />
+<br />
+<label class="require" for="category">Game category:</label> <!-- this part is incomplete, no clue what to do here --> <select id="category" name="category" required=""><option disabled="disabled" selected="selected" value="">Select a category</option><option value="tabletop">Tabletop</option><option value="sports">Sports</option> </select><br />
+<br />
+<label class="require" for="desc">Game description:</label><br />
+<br />
+<textarea cols="50" id="desc" name="desc" required="" rows="3"></textarea><br />
+<br />
+<label class="require" for="subject">Game subject:</label> <input id="subject" name="subject" required="" type="text" /><br />
+<br />
+<label class="require" for="grade">Student grade level:</label> <input id="grade" name="grade" required="" type="text" /><br />
+<br />
+<label for="cost">Game cost:</label> <input id="cost" name="cost" type="number" value="0" /><br />
+<br />
+<label for="tags">Game tags (separate by comma):</label> <input id="tags" name="tags" type="text" /><br />
+&nbsp;
+<p id="costSum"><em style="font-size: 1.1em;">Your game is Cheap ($0)</em></p>
+<button id="addEquip" type="button">Add an equipment</button><button id="removeEquip" style="display: none;" type="button">Remove an equipment</button><br />
+<span id="equipments"> <!-- this equipment is identical to the generated ones --> <span id="E0"><label class="require" for="EN0">Equipment1 name</label> <input id="EN0" name="equipment0n" required="" type="text" /><br />
+<label for="EC0">Equipment1 cost</label> <input id="EC0" name="equipment0c" type="number" value="0" /></span></span><br />
+<br />
+<button id="addReview" type="button">Add a review</button><button id="removeReview" style="display: none;" type="button">Remove a review</button><br />
+<span id="reviews"> </span><br />
+<label class="require" for="image">Picture URL:</label> <input id="image" name="image" required="" type="text" /><br />
+<br />
+<label class="require" for="multi">Is it multiplayer?:</label> <input id="multi" name="multi" required="" type="text" /><br />
+<br />
+<button onclick="return validate()" type="submit" value="submit">Submit</button><button style="margin-left: 150px;" type="reset" value="reset">Reset</button></form>
+<script>
+	// equipments
+	var equipments = 1;
+	 document.getElementById('addEquip').addEventListener('click', function () {
+        addEquip();
+    });
+
+    document.getElementById('removeEquip').addEventListener('click', function () {
+        removeEquip();
+    });
+
+	function addEquip() {
+		if (equipments == 1) {
+			document.getElementById("removeEquip").style.display = "inline";
+		}
+		var create = "";
+		create +=('<label for="EN'+equipments+'" class="require">Equipment' + (equipments+1) + ' name</label>');
+		create +=('<input type="text" id="EN'+equipments+'" name="equipment'+equipments+'n" required><br>');
+		create +=('<label for="EC'+equipments+'">Equipment' + (equipments+1) + ' cost</label>');
+		create +=('<input type="number" value="0" id="EC'+equipments+'" name="equipment'+equipments+'c"><br><br>');
+		var out = document.createElement("span");
+		out.id = 'E' + equipments;
+		out.innerHTML = create;
+		document.getElementById("equipments").appendChild(out);
+		equipments++;
+	}
+	function removeEquip() {
+		equipments--;
+		document.getElementById('E'+equipments).remove();
+		if (equipments == 1) {
+			document.getElementById("removeEquip").style.display = "none";
+		}
+		updateSum();
+	}
+	// reviews
+	var reviews = 0;
+	 document.getElementById('addReview').addEventListener('click', function () {
+        addReview();
+    });
+    document.getElementById('removeReview').addEventListener('click', function () {
+        removeReview();
+    });
+
+	function addReview() {
+		if (reviews == 0) {
+			document.getElementById("removeReview").style.display = "inline";
+		}
+		var create = "";
+		create +=('<label for="RB'+reviews+'" class="require">Review ' + reviews + '</label><br>');
+		create +=('<textarea placeholder="x out of 5 stars" rows="2" cols="50" id="RB'+reviews+'" name="review'+reviews+'n" required></textarea><br>');
+		var out = document.createElement("span");
+		out.id = 'R' + reviews;
+		out.innerHTML = create;
+		document.getElementById("reviews").appendChild(out);
+		reviews++;
+	}
+	function removeReview() {
+		reviews--;
+		document.getElementById('R'+reviews).remove();
+		if (reviews == 0) {
+			document.getElementById("removeReview").style.display = "none";
+		}
+	}
+	// cost updating
+	document.addEventListener("input", function (event) {
+		updateSum();
+	});
+	function updateSum() {
+		var sum = 0;
+		if (!isNaN(parseInt(document.getElementById("cost").value))) {
+			sum += parseInt(document.getElementById("cost").value);
+		}
+		for (var i = 0; i < equipments; i++) {
+			if (!isNaN(parseInt(document.getElementById("EC"+i).value))) {
+				sum += parseInt(document.getElementById("EC"+i).value);
+			}
+		}
+		var out = "";
+		if (sum < 25) {
+			out = "Cheap";
+		}
+		else if (sum > 100) {
+			out = "Expensive";
+		}
+		else {
+			out = "Affordable";
+		}
+		document.getElementById("costSum").innerHTML = '<em style="font-size: 1.1em;">Your game is '+out+' ($'+sum+')';
+	}
+	// validation
+	function validate() {
+		if (sum < 0) {
+			alert("Your game cannot be negative cost");
+			return false;
+		}
+		const regex = /[0-5](.d)? out of 5 stars$/;
+		for (var i = 0; i < reviews; i++) {
+			var body = document.getElementById("RB"+i).value;
+			if (!body.match(regex)) {
+				alert('Reviews must contain "X(.Y) out of 5" stars' + "   " + body);
+				return false;
+			}
+		}
+		return true;
+	}
+</script>]]></content><private><![CDATA[]]></private><author><![CDATA[nikita]]></author></item>

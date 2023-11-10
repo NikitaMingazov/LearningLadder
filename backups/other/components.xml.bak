@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel><item><title><![CDATA[navbar]]></title><slug>navbar</slug><value><![CDATA[<a href="/">Homepage</a><br>
+<a href="/?id=input">Submit a game</a><br>
+<a href="/?id=about">About us</a><br>
+<a href="/?id=contact">Contact us</a><br>
+<a href="/?id=terms">Terms and Conditions</a><br>
+<a href="/?id=privacy">Privacy policy</a><br>
+<a href="/?id=games&category=tabletop">Tabletop games</a><br>
+<a href="/?id=games&category=sports">Sports games</a>]]></value></item><item><title><![CDATA[Sidebar]]></title><slug>sidebar</slug><value><![CDATA[<h2>GetSimple Features</h2>
+<ul> 
+<li>XML based data storage</li> 
+<li>Best-in-Class User Interface</li> 
+<li>'Undo' protection & backups</li> 
+<li>Easy to theme</li> 
+<li>Great documentation</li> 
+<li>Growing community</li> 
+</ul>
+<p>This is your sidebar text. I have changed in <em>Theme -> Edit Components</em></p>
+<p><a href="http://get-simple.info/download/">Download the Latest GetSimple</a></p>]]></value></item><item><title><![CDATA[Tagline]]></title><slug>tagline</slug><value><![CDATA[Just Another GetSimple Website]]></value></item></channel>
